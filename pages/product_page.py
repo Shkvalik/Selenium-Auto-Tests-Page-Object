@@ -9,7 +9,7 @@ class ProductPage(BasePage):
 
     def should_be_correct_confirming_message(self):
         confirming_message = self.browser.find_element(*ProductPageLocators.CONFIRMING_MESSAGE).text
-        goods_name = self.browser.find_element(*ProductPageLocators.CONFIRMING_MESSAGE).text
+        goods_name = self.browser.find_element(*ProductPageLocators.GOODS_NAME).text
         assert goods_name == confirming_message, f"There is no goods name in confirming message\nGoods' name --->{goods_name}\nConfirming message --->{confirming_message}"
 
     def should_be_correct_message_about_basket_price(self):
