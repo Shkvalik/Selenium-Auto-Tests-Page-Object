@@ -16,3 +16,9 @@ class ProductPage(BasePage):
         goods_price = self.browser.find_element(*ProductPageLocators.GOODS_PRICE).text.replace('&nbsp;£', '')
         basket_price = self.browser.find_element(*ProductPageLocators.BASKET_PRICE).text.replace('&nbsp;£', '')
         assert goods_price == basket_price, f"Goods' price doesn't corresponds to basket's price\nGoods' price --->{goods_price}\nbasket's price --->{basket_price}"
+
+    def confirming_message_should_not_be(self):
+        assert self.is_not_element_present(*ProductPageLocators.CONFIRMING_MESSAGE)
+
+    def confirming_message_should_disappear(self):
+        assert self.is_disappeared(*ProductPageLocators.CONFIRMING_MESSAGE)
