@@ -1,5 +1,4 @@
-####Thesis for the test automation with Selenium and Python course
-
+#Thesis for the test automation with Selenium and Python course
 
 #### Executable commands:
 
